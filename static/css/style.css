@@ -1,52 +1,49 @@
-/* Micro Reset */
-
-html {
-  font-size: 100%;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  box-sizing: border-box;
-}
-
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-}
-
-img {
-  max-width: 100%;
-}
-
 /* Typography */
 
+html {
+    font-size: 15px; 
+}
+
 body {
-  line-height: 1.75;
+    width: 87.5%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px 0;
+    font-family: Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
+    background-color: #fffff8;
+    color: #111;
+    max-width: 800px;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  padding: 0;
-  margin: 60px 0 30px;
-  line-height: 1.25;
-  font-weight: normal;
+h1 {
+    font-weight: 400;
+    margin-top: 4rem;
+    margin-bottom: 1.5rem;
+    font-size: 3.2rem;
+    line-height: 1; 
 }
 
-blockquote {
-  margin: 1em 0;
-  padding: 0 2em;
-  border-left: 3px solid #ddd;
+h2 {
+    font-style: italic;
+    font-weight: 400;
+    margin-top: 2.1rem;
+    margin-bottom: 1.4rem;
+    font-size: 2.2rem;
+    line-height: 1; 
 }
 
-footer {
-  text-align: center;
+p,
+ol,
+ul {
+    font-size: 1rem;
+    line-height: 2rem; 
 }
 
 /* Code */
 
 pre, code {
   font-size: .9em;
+  font-family: "Lucida Console", Monaco, monospace;
 }
 
 pre code {
@@ -62,23 +59,7 @@ code {
   background: #f9f9f9;
 }
 
-pre code {
-  background: none;
-}
-
-/* Lists */
-
-ul, ol {
-  padding: 0 0 0 20px;
-}
-
-li {
-  margin: 4px 0;
-  padding: 0;
-}
-
 /* Links */
-
 a {
   color: black;
   text-decoration: none;
@@ -86,146 +67,22 @@ a {
   border-bottom: 1px solid;
 }
 
-a:hover {
-}
-
 sup a {
   border-bottom: none;
 }
 
 /* Miscellanea */
-
 hr {
   display: block;
   height: 1px;
+  width: 55%;
   border: 0;
-  border-top: 1px solid;
-  margin: 50px auto;
-  padding: 0;
-  max-width: 300px;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0; 
 }
 
-/* Layout */
-
-body {
-  margin: 0 auto;
-  padding: 30px 0;
-  max-width: 800px;
-}
-
-.main {
-  width: 700px;
-  padding: 32px 10px 20px 50px;
-  margin-left: 260px;
-  border-left: 3px solid black;
-  min-height: calc(100vh - 60px);
-}
-
-/* Main */
-.main .title h1 {
-  margin-top: 0;
-  margin-bottom: 40px;
-}
-
-.title h3 {
-  font-weight: normal;
-  text-align: center;
-}
-
-/* Tables */
-
-table {
-  margin: auto;
-  border-top: 1px solid #666;
-  border-bottom: 1px solid #666;
-}
-
-table thead th {
-  border-bottom: 1px solid #666;
-}
-
-th, td {
-  padding: 5px;
-}
-
-thead, tfoot, tr:nth-child(even) {
-  background: #f8f8f8;
-}
-
-/**
- *  * -------------------------------------------------------------------------
- *   *  Media Queries
- *    * -------------------------------------------------------------------------
- *     *
- *      * The @viewport tag does the same thing as
- *       *
- *        *   <meta name="viewport" content="width=device-width">
- *         *
- *          * but in the future W3C standard way. The -ms- prefix is required for
- *           * IE10+ to render responsive styling in Windows 8 "snapped" views;
- *            * IE10+ does not honour the meta tag.
- *             */
-
-@-ms-viewport {
-  width: device-width;
-}
-
-@viewport {
-  width: device-width;
-}
-
-/* Tablet screens and smaller */
-
-@media screen and (max-width: 960px) {
-
-  body {
-    width: auto;
-    max-width: 700px;
-  }
-
-  .main {
-    width: auto;
-    padding: 40px 10px;
-    margin-left: 0;
-    border-left: none;
-    min-height: auto;
-  }
-
-}
-
-/* Landscape phone screens and smaller */
-
-@media screen and (max-width: 720px) {
-}
-
-/* Portrait phone screens */
-
-@media screen and (max-width: 480px) {
-
-  body {
-    font-size: 16px;
-  }
-
-  h1 {
-    font-size: 28px;
-  }
-
-  h2 {
-    font-size: 18px;
-  }
-
-  h3, h4, h5, h6 {
-    font-size: 16px;
-  }
-
-  pre, code {
-    font-size: 12px;
-  }
-
-}
-head, tfoot, tr:nth-child(even) { background: #eee; }
-
-/* icon font */
+/* icons */
 @font-face {
   font-family: 'icomoon';
   src: url('/fonts/icons.woff') format('woff');
@@ -235,7 +92,6 @@ head, tfoot, tr:nth-child(even) { background: #eee; }
 }
 
 [class^="icon-"], [class*=" icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
   speak: none;
   font-style: normal;
@@ -243,8 +99,6 @@ head, tfoot, tr:nth-child(even) { background: #eee; }
   font-variant: normal;
   text-transform: none;
   line-height: 1;
-
-  /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -259,11 +113,3 @@ head, tfoot, tr:nth-child(even) { background: #eee; }
   content: "\e903";
 }
 
-/* fonts */
-body {
-  font-family: Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, 'source-han-serif-sc', 'Source Han Serif SC', 'Source Han Serif CN', 'Source Han Serif TC', 'Source Han Serif TW', 'Source Han Serif', 'Songti SC', 'Microsoft YaHei', serif;
-}
-code {
-  font-family: "Lucida Console", Monaco, monospace;
-  font-size: 85%;
-}
